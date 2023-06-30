@@ -5,6 +5,7 @@ const http = require('http'); // require is used to import files in node.js
 
 const server = http.createServer((req, res) => {
     console.log(req);
+    // process.exit(); // to hard exist the event loop
 });
 
 server.listen(3000);
