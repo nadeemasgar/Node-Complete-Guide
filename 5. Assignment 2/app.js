@@ -1,14 +1,20 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
 
-app.use('/users', (req, res, next) => {
-    console.log('Inside the user middleware');
-    res.send('<h1>Hi, this is Nadeem</h1>');
+app.use(bodyParser.urlencoded());
+
+app.use('/add-product', (req, res, next) => {
+    res.send('<form action="/product" method="POST"><input type="text" name="title"><button type="submit">Add Product</button></form>');
+});
+
+app.use('/product', (req, res, next) => {
+    console.log(req.body);
+    res.redirect('/'); // redirect function for redirecting to some other path
 });
 
 app.use('/', (req, res, next) => {
-    console.log('Inside the / middleware');
     res.send('<h1>Hello from Express!</h1>');
 });
 
