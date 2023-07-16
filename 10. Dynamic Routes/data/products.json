@@ -1,7 +1,8 @@
 [
   {
+    "id": "12345",
     "title": "A Book",
-    "imageUrl": "https://www.publicdomainpictures.net/pictures/10000/velka/1-1210009435EGmE.jpg",
+    "imageUrl": "https://static.vecteezy.com/system/resources/previews/009/399/398/original/old-vintage-book-clipart-design-illustration-free-png.png",
     "description": "This is an awesome book!",
     "price": "19"
   }
